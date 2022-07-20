@@ -1,33 +1,35 @@
-public class Ticket {
+import java.util.Objects;
 
-    private int id;
-    private int price;
+public class Ticket implements Comparable<Ticket> {
+
+    private int idTicket;
+    private int priceTicket;
     private String airportDeparture;
     private String airportArrival;
     private int timeTravel;
 
-    public Ticket(int id, int price, String airportDeparture, String airportArrival, int timeTravel) {
-        this.id = id;
-        this.price = price;
+    public Ticket(int idTicket, int priceTicket, String airportDeparture, String airportArrival, int timeTravel) {
+        this.idTicket = idTicket;
+        this.priceTicket = priceTicket;
         this.airportDeparture = airportDeparture;
         this.airportArrival = airportArrival;
         this.timeTravel = timeTravel;
     }
 
-    public int getId() {
-        return id;
+    public int getIdTicket() {
+        return idTicket;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdTicket(int idTicket) {
+        this.idTicket = idTicket;
     }
 
-    public int getPrice() {
-        return price;
+    public int getPriceTicket() {
+        return priceTicket;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setPriceTicket(int priceTicket) {
+        this.priceTicket = priceTicket;
     }
 
     public String getAirportDeparture() {
@@ -52,5 +54,34 @@ public class Ticket {
 
     public void setTimeTravel(int timeTravel) {
         this.timeTravel = timeTravel;
+    }
+
+    @Override
+    public String toString() {
+        return airportDeparture;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ticket ticket = (Ticket) o;
+        return idTicket == ticket.idTicket && priceTicket == ticket.priceTicket && timeTravel == ticket.timeTravel && Objects.equals(airportDeparture, ticket.airportDeparture) && Objects.equals(airportArrival, ticket.airportArrival);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idTicket, priceTicket, airportDeparture, airportArrival, timeTravel);
+    }
+
+    @Override
+    public int compareTo(Ticket otherTicket) {
+        if (priceTicket < otherTicket.priceTicket) {
+            return -1;
+        }
+        if (priceTicket > otherTicket.priceTicket) {
+            return 1;
+        }
+        return 0;
     }
 }
