@@ -1,16 +1,18 @@
 import java.util.Arrays;
+import java.util.Objects;
 
 public class TicketsManager {
 
     private TicketsRepository repository = new TicketsRepository();
 
-public void addTicket (Ticket ticket){
-    repository.saveTicket(ticket);
-}
+    public void addTicket(Ticket ticket) {
+        repository.saveTicket(ticket);
+    }
+
     public Ticket[] findAll(String from, String to) {
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : repository.tickets) {
-            if (ticket.getAirportDeparture() == from && ticket.getAirportArrival() == to) {
+            if (Objects.equals(ticket.getAirportDeparture(), from) && Objects.equals(ticket.getAirportArrival(), to)) {
                 Ticket[] tmp = new Ticket[result.length + 1];
                 for (int i = 0; i < result.length; i++) {
                     tmp[i] = result[i];

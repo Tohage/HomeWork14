@@ -47,7 +47,7 @@ public class TicketsManagerTest {
     }
 
     @Test
-    public void addTicket () {
+    public void addTicket() {
 
         repository.saveTicket(one);
         repository.saveTicket(two);
@@ -60,7 +60,7 @@ public class TicketsManagerTest {
     }
 
     @Test
-    public void removeTicketId () {
+    public void removeTicketId() {
 
         repository.saveTicket(one);
         repository.saveTicket(two);

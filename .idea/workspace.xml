@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60a24a96-fc86-4865-8b3b-4951616f6d51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TicketsManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TicketsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TicketsManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TicketsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicketsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TicketsManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TicketsManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +44,11 @@
 }</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn clean" />
       <command value="mvn verify" />
       <command value="mvn clean verify" />
       <command value="mvn test verify" />
       <command value="mvn clean test" />
+      <command value="mvn clean" />
     </option>
   </component>
   <component name="RunManager" selected="JUnit.TicketsManagerTest">
